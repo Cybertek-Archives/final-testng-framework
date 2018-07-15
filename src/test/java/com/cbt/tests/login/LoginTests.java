@@ -13,6 +13,7 @@ public class LoginTests extends TestBase {
 
 	@Test()
 	public void positiveloginTest() {
+		
 		driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
 		driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
 		driver.findElement(By.id("ctl00_MainContent_login_button")).click();

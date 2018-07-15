@@ -21,13 +21,15 @@ public class OrderTests extends TestBase {
 	String userId = ConfigurationReader.getProperty("username");
 	String password = ConfigurationReader.getProperty("password");
 
+	
 	@Test(description = "Verify labels and tab links are displayed", priority = 1)
 	public void labelsVerication() {
+		
 		LoginPage loginPage = new LoginPage();
 
 		assertEquals(driver.getTitle(), "Web Orders Login", "LoginPage is not displayed. Application is down.");
 		loginPage.login(userId, password);
-
+		
 		AllOrdersPage allOrdersPage = new AllOrdersPage();
 		assertTrue(allOrdersPage.webOrders.isDisplayed(), "Web Orders is not displayed");
 		assertTrue(allOrdersPage.listOfAllOrders.isDisplayed(), "List Of All Orders label is not displayed");
