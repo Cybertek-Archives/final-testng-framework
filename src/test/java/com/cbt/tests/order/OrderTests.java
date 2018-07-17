@@ -38,7 +38,7 @@ public class OrderTests extends TestBase {
 		assertTrue(allOrdersPage.orderTab.isDisplayed(), "orderTab is not displayed");
 	}
 
-	@Test(description = "Verify default Products and prices")
+	@Test( groups= {"smoke, regression"},  description = "Verify default Products and prices")
 	public void availableProductsTest() {
 		assertEquals(driver.getTitle(), "Web Orders Login", "LoginPage is not displayed. Application is down.");
 		LoginPage loginPage = new LoginPage();

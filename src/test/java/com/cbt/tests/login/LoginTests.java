@@ -19,7 +19,7 @@ public class LoginTests extends TestBase {
 		driver.findElement(By.id("ctl00_MainContent_login_button")).click();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups= {"smoke"})
 	public void positiveLoginUsingPOM() {
 		LoginPage loginPage = new LoginPage();
 		loginPage.userName.sendKeys(ConfigurationReader.getProperty("username"));
@@ -28,7 +28,7 @@ public class LoginTests extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(groups= {"smoke"}, priority = 1)
 	public void invalidUsernameTest() {
 		LoginPage loginPage = new LoginPage();
 		loginPage.userName.sendKeys("invalid");

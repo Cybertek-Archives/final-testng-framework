@@ -12,20 +12,20 @@ import com.cbt.utilities.Driver;
 
 public abstract class TestBase {
 	protected WebDriver driver;
-	protected  Actions actions;
-	
-	@BeforeMethod
+	protected Actions actions;
+
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() {
 		driver = Driver.getDriver();
 		actions = new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
-		
+
 		driver.get(ConfigurationReader.getProperty("url"));
 
 	}
-	
-	@AfterMethod
+
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		Driver.closeDriver();
 	}
