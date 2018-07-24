@@ -25,7 +25,9 @@ public abstract class TestBase {
 	protected ExtentReports report;
 	protected ExtentHtmlReporter htmlReporter;
 	protected ExtentTest extentLogger;
-
+	public void delete() {
+		System.out.println("remote");
+	}
 	@BeforeTest
 	public void setUpTest() {
 		// actual reporter
