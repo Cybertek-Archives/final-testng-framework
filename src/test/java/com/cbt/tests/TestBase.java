@@ -27,6 +27,7 @@ public abstract class TestBase {
 	protected ExtentTest extentLogger;
 	public void delete() {
 		System.out.println("local");
+		System.out.println("remote");
 	}
 	@BeforeTest
 	public void setUpTest() {
