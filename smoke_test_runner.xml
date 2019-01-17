@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Smoke tests" verbose="2">
+<suite name="Smoke tests" verbose="2" parallel="tests">
 	
 	<test name="Login smoke tests">
 		<packages>
